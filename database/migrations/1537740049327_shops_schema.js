@@ -7,10 +7,9 @@ class ShopsSchema extends Schema {
     this.create('shops', (table) => {
       table.increments()
       table.string('shop_name', 80).notNullable().unique()
-      table.string('shop_type').notNullable().unique()
+      table.string('shop_type').notNullable()
       table.string('email', 254).notNullable().unique()
-      table.string('about', 254).notNullable().unique()
-      table.string('access_id').notNullable().unique()
+      table.string('about', 254).notNullable()
       table.string('logo').nullable()
       table.string('latitude').nullable()
       table.string('longitude').nullable()
