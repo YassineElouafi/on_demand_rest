@@ -1,6 +1,4 @@
-# adonis-boilerplate-jwt
-
-Boilerplate/Starter Project for building RESTful APIs using Adonis, MySQL, JWT authentication.
+# ADONIS_ON_DEMAND_REST_API
 
 ## Setup
 
@@ -32,39 +30,3 @@ Run the following command to start the HTTP server (dev mode).
 npm run dev
 ```
 
-### API
-
-Register
-
-```bash
-POST /api/v1/auth/register
-{email: 'youremail@gmail.com', password: 'yourpasswod'}
-```
-
-Sign-In
-
-```bash
-POST /api/v1/auth/sign-in
-{email: 'youremail@gmail.com', password: 'yourpasswod'}
-```
-
-Refresh the token
-
-```bash
-POST /api/v1/auth/token/refresh
-{refresh_token:'REFRESH_TOKEN'}
-```
-
-Get the current user
-
-```bash
-GET /api/v1/user/me
-Authorization : Bearer YOUR_TOKEN
-```
-
-Logout
-
-```bash
-POST /api/v1/auth/logout
-{refresh_token:'REFRESH_TOKEN'}
-```
