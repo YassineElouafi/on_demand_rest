@@ -11,6 +11,11 @@ class UserSchema extends Schema {
         .notNullable()
         .unique();
       table
+        .integer('user_type', 80)
+        .notNullable();
+      table
+        .integer('shop_id', 80);
+      table
         .string('email', 254)
         .notNullable()
         .unique();

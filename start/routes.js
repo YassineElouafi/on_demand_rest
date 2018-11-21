@@ -33,6 +33,9 @@ Route.group(() => {
   */
 
   Route.post('/shop/new', 'ShopController.addShop');
+  Route.post('/shop/activate', 'ShopController.activateShop');
+  Route.post('/shop/disactivate', 'ShopController.disactivateShop');
+  Route.get('/shop/getShops', 'ShopController.getShops');
 
 
 }).prefix('api/v1');

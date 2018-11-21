@@ -13,6 +13,7 @@ class ShopsSchema extends Schema {
       table.string('logo').nullable()
       table.string('latitude').nullable()
       table.string('longitude').nullable()
+      table.boolean('is_active').defaultTo(true);
       table.timestamps()
     })
   }

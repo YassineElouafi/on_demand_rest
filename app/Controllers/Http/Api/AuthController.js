@@ -16,13 +16,14 @@ class AuthController {
   }
 
   async register({ request, response }) {
-    const { email, username, password } = request.only([
+    const { email, username, user_type, password } = request.only([
       'email',
       'username',
+      'user_type',
       'password'
     ]);
     try {
-      const user = await User.create({ email, username, password });
+      const user = await User.create({ email, username, user_type, password });
       return response.send({ message: 'User has been created' });
     } catch (err) {
       response.status(401).send({ error: 'Please try again' });
